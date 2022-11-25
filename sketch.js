@@ -9,7 +9,6 @@ function setup() {
 
   wave = new p5.Oscillator();
   wave.setType('sine');
-  wave.start();
   wave.freq(440);
   wave.amp(0);      //volume
 
@@ -23,11 +22,13 @@ function setup() {
 // }
 
 function toggle(){
+
   if(!playing){
+    wave.start();
     wave.amp(0.5, 1);
     playing = true;
   }else{
     wave.amp(0, 1);
-    playg = false;
+    playing = false;
   }
 }
