@@ -46,9 +46,10 @@ function toggle(){
 
 // 가속도 추가
 function deviceMoved(){
-  r = map(accelerationX, -90, 90, 100, 175);
-  g = map(accelerationY, -90, 90, 100, 200);
-  b = map(accelerationZ, -90, 90, 100, 200);
+  // Text("accelerationX", "accelerationY", "accelerationZ", 10, 10);
+  r = accelerationX * 122;
+  g = accelerationY * 122;
+  b = accelerationZ * 122;
 }
 
 // 가속도 상자
